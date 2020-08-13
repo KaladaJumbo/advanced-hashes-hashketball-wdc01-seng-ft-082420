@@ -230,11 +230,11 @@ end
 def player_stats(name)
   
   players_array = all_players
-  
+  player_hash = {}
   players_array.each do |player|
     
     if player[:player_name] == name
-      return {players_array[player]}
+      player_hash << players_array[player]
     end
     
   end
