@@ -248,6 +248,7 @@ def big_shoe_rebounds
   players_array = all_players
   current_biggest = 0
   stat_of_player = {}
+  player_with_biggest = ""
   
   players_array.each do |var|
     
