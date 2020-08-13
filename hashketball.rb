@@ -288,9 +288,9 @@ def winning_team
   home_team_score = 0 
   away_team_score = 0 
   
-  game.each do |key, value|
+  game[:home][:players].each [:score].collect do |key|
   
-    game[key]
+    game[key][key][:score]
   
   end
   
