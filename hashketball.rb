@@ -234,7 +234,7 @@ def player_stats(name)
   players_array.each do |player|
     
     if player[:player_name] == name
-      return players_array[player]
+      return {players_array[player]}
     end
     
   end
