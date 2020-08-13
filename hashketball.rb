@@ -265,6 +265,15 @@ end
 
 def most_points_scored
   
+  players_array = all_players
+  highest_scorer = String.new  
+  
+  players_array.each do |var|
+    
+    if num_points_scored(var[:player_name]) >= highest_points
+      
+    
+  end
   
 end
 
