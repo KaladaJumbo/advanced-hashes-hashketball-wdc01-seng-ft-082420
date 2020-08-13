@@ -310,6 +310,11 @@ end
 
 def player_with_longest_name
   
+  players_array = all_players
+  longest_name = ""
+  
+  all_players[]
+  
   
 end
 
