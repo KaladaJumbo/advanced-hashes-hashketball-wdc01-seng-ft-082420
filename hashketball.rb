@@ -313,8 +313,15 @@ def player_with_longest_name
   players_array = all_players
   longest_name = ""
   
-  all_players[]
+  players_array.each do |var|
+    
+    if var[:player_name].length > longest_name.length
+      longest_name = var[:player_name]
+    end
+    
+  end
   
+  return longest_name
   
 end
 
