@@ -253,6 +253,7 @@ def big_shoe_rebounds
   players_array.each do |var|
     
     if shoe_size(var[:player_name]) > current_biggest
+      current_biggest = shoe_size(var[:player_name])
       player_with_biggest = var[:player_name]
     end
     
