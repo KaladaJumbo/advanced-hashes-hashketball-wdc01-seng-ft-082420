@@ -1,4 +1,6 @@
 # Write your code below game_hash
+require 'pry'
+
 def game_hash
   {
     home: {
@@ -126,4 +128,162 @@ def game_hash
   }
 end
 
+
+def all_players
+  # takes the gmae hash and returns array of all players
+  
+  game = game_hash
+  
+  game_array = game[:home][:players] + game[:away][:players]
+  
+  return game_array
+  
+end
+
+def players_on_team(name)
+  
+  game = game_hash
+  
+  if game[:home][:team_name] == name
+    return game[:home][:players]
+  elsif game[:away][:team_name] == name
+    return game[:away][:players]
+  else 
+    puts "no team called #{name} found"
+  end
+  
+  
+end
+
+
+def num_points_scored(name)
+
+  players_array = all_players
+  
+  players_array.each do |player|
+    
+    if player[:player_name] == name
+      return player[:points]
+    end
+    
+  end
+    
+  
+end
+
+
+def shoe_size(name)
+  
+  players_array = all_players
+  
+  players_array.each do |player|
+    
+    if player[:player_name] == name
+      return player[:shoe]
+    end
+    
+  end
+    
+  
+end
+
+def team_colors(name)
+  
+  game = game_hash
+  
+  if game[:home][:team_name] == name
+    return game[:home][:colors]
+  elsif game[:away][:team_name] == name
+    return game[:away][:colors]
+  else 
+    puts "no team called #{name} found"
+  end
+  
+end
+
+def team_names
+  
+  game = game_hash
+  names = [game[:home][:team_name], game[:away][:team_name]]
+  
+  return names
+  
+end
+
+def player_numbers(name)
+  
+  game = game_hash
+  players = players_on_team(name)
+  nums_array = []
+  
+    
+    players.each do |var|
+      nums_array << var[:number]
+    end
+    
+    return nums_array
+ 
+  
+end
+
+
+def player_stats(name)
+  
+  players_array = all_players
+  
+  players_array.each do |player|
+    
+    if player[:player_name] == name
+      return players_array[player]
+    end
+    
+  end
+    
+  
+end
+
+def big_shoe_rebounds
+  
+  players_array = all_players
+  current_biggest = 0
+  stat_of_player = {}
+  
+  players_array.each do |var|
+    
+    if shoe_size(var[:player_name]) > current_biggest
+      player_with_biggest = var[:player_name]
+    end
+    
+    binding.pry
+    stat_of_player = player_stats(player_with_biggest)
+    return stat_of_player[:rebounds]
+    
+  end
+  
+end
+
+
+def most_points_scored
+  
+  
+end
+
+def winning_team
+  
+  
+end
+
+def player_with_longest_name
+  
+  
+end
+
+def long_name_steals_a_ton?
+  
+  
+end
+
+
+
 # Write code here
+binding.pry
