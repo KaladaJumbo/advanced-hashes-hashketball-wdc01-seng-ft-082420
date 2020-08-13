@@ -236,7 +236,7 @@ def player_stats(name)
     
     if player[:player_name] == name
       binding.pry
-      return players_array[player]
+      return player[:player_name]
     end
     
   end
