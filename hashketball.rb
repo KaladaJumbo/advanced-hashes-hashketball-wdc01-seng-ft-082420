@@ -233,6 +233,7 @@ def player_stats(name)
   
   players_array.each do |player|
     
+    binding.pry
     if player[:player_name] == name
       return players_array[player]
     end
