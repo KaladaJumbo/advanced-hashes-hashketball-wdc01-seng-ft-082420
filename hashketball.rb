@@ -290,10 +290,21 @@ def winning_team
   
   game[:home][:players].each do |var|
   
-    var[:points].collect {|p| home_team_score = home_team_score + 
+    home_team_score = home_team_score + var[:points]
   
   end
   
+  game[:away][:players].each do |var|
+  
+    away_team_score = away_team_score + var[:points]
+  
+  end
+  
+  if home_team_score > away_team_score 
+    return game[:home][:team_name]
+  elsif away_team_score > home_team_score
+    return game[:away][:team_name]
+  end
   
 end
 
