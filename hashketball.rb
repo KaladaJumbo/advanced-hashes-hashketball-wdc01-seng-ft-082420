@@ -288,7 +288,11 @@ def winning_team
   home_team_score = 0 
   away_team_score = 0 
   
-  game.each 
+  game.each do |key, value|
+  
+    game[key]
+  
+  end
   
   
 end
