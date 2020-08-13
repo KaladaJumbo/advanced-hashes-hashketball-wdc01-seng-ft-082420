@@ -288,9 +288,9 @@ def winning_team
   home_team_score = 0 
   away_team_score = 0 
   
-  game[:home][:players].each [:score].collect do |key|
+  game[:home][:players].each do |var|
   
-    game[key][key][:score]
+    var[:points].collect {|p| home_team_score = home_team_score + 
   
   end
   
