@@ -255,13 +255,14 @@ def big_shoe_rebounds
       player_with_biggest = var[:player_name]
     end
     
-    stat_of_player = player_stats(player_with_biggest)
-    
-    binding.pry
-    
-    return stat_of_player[:rebounds]
-    
   end
+    
+  stat_of_player = player_stats(player_with_biggest)
+    
+  binding.pry
+    
+  return stat_of_player[:rebounds]
+    
   
 end
 
