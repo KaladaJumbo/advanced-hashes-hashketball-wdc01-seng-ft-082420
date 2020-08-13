@@ -266,18 +266,29 @@ end
 def most_points_scored
   
   players_array = all_players
-  highest_scorer = String.new  
+  highest_scorer = "" 
+  highest_points = 0 
   
   players_array.each do |var|
     
     if num_points_scored(var[:player_name]) >= highest_points
-      
+      highest_scorer = var[:player_name]
+      highest_points = var[:points]
+    end
     
   end
+  
+  return highest_scorer
   
 end
 
 def winning_team
+  
+  game = game_hash
+  home_team_score = 0 
+  away_team_score = 0 
+  
+  game.each 
   
   
 end
