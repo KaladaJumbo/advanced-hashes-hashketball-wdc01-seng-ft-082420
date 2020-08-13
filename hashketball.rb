@@ -327,6 +327,20 @@ end
 
 def long_name_steals_a_ton?
   
+  players_array = all_players
+  most_steals = 0 
+  player_with_most_steals = ""
+  
+  players_array.each do |var|
+    
+    if var[:steals] > most_steals
+      player_with_most_steals = var[:player_name]
+      most_steals = var[:steals]
+    end
+    
+  end
+
+  return player_with_longest_name == player_with_most_steals
   
 end
 
