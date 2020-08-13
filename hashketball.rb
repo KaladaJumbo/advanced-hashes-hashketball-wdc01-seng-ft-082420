@@ -235,7 +235,6 @@ def player_stats(name)
     
     
     if player[:player_name] == name
-      binding.pry
       return player[:player_name]
     end
     
@@ -348,4 +347,4 @@ end
 
 
 # Write code here
-binding.pry
+#binding.pry
